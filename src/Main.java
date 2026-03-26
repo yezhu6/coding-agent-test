@@ -17,6 +17,16 @@ public class Main {
         return -1;
     }
 
+    // Linear search implementation
+    public static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Usage: java Main <array elements> <target value>");
@@ -28,7 +38,10 @@ public class Main {
             arr[i] = Integer.parseInt(args[i]);
         }
         int target = Integer.parseInt(args[args.length - 1]);
-        int result = binarySearch(arr, target);
-        System.out.println("Result index: " + result); // Should print the correct index or -1 if not found
+        java.util.Arrays.sort(arr); // binarySearch requires a sorted array
+        int binaryResult = binarySearch(arr, target);
+        int linearResult = linearSearch(arr, target);
+        System.out.println("Binary search result index: " + binaryResult);
+        System.out.println("Linear search result index: " + linearResult);
     }
 }
