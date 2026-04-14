@@ -17,6 +17,18 @@ public class Main {
         return -1;
     }
 
+    public static int search(int[] arr, int target) {
+        if (arr == null) {
+            return -1;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Usage: java Main <array elements> <target value>");
@@ -28,7 +40,7 @@ public class Main {
             arr[i] = Integer.parseInt(args[i]);
         }
         int target = Integer.parseInt(args[args.length - 1]);
-        int result = binarySearch(arr, target);
+        int result = search(arr, target);
         System.out.println("Result index: " + result); // Should print the correct index or -1 if not found
     }
 }
