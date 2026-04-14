@@ -17,7 +17,12 @@ public class Main {
         return -1;
     }
 
-    public static int search(int[] arr, int target) {
+    /**
+     * Performs linear search on the input array.
+     * Works for sorted and unsorted arrays in O(n) time.
+     * Returns -1 when the target value is not found.
+     */
+    public static int linearSearch(int[] arr, int target) {
         if (arr == null) {
             return -1;
         }
@@ -27,6 +32,10 @@ public class Main {
             }
         }
         return -1;
+    }
+
+    public static int search(int[] arr, int target) {
+        return linearSearch(arr, target);
     }
 
     public static void main(String[] args) {
