@@ -40,7 +40,7 @@ public class Main {
             arr[i] = Integer.parseInt(args[i]);
         }
         int target = Integer.parseInt(args[args.length - 1]);
-        int result = search(arr, target);
+        int result = binarySearch(arr, target);
         System.out.println("Result index: " + result); // Should print the correct index or -1 if not found
     }
 }
