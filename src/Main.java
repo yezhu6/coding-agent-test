@@ -34,6 +34,10 @@ public class Main {
         return -1;
     }
 
+    /**
+     * Compatibility wrapper for callers expecting a generic search API.
+     * Delegates to {@link #linearSearch(int[], int)}.
+     */
     public static int search(int[] arr, int target) {
         return linearSearch(arr, target);
     }
