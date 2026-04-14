@@ -17,6 +17,31 @@ public class Main {
         return -1;
     }
 
+    /**
+     * Performs linear search on the input array.
+     * Works for sorted and unsorted arrays in O(n) time.
+     * Returns -1 when the target value is not found.
+     */
+    public static int linearSearch(int[] arr, int target) {
+        if (arr == null) {
+            return -1;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Compatibility wrapper for callers expecting a generic search API.
+     * Delegates to {@link #linearSearch(int[], int)}.
+     */
+    public static int search(int[] arr, int target) {
+        return linearSearch(arr, target);
+    }
+
     public static void main(String[] args) {
         if (args.length < 2) {
             System.out.println("Usage: java Main <array elements> <target value>");
