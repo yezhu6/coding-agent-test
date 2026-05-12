@@ -7,5 +7,5 @@ Pass sorted array values first; the final argument is the search target.
 
 ```bash
 javac src/Main.java
-java -cp src Main 1 2 3 4 5 4
+java -cp src Main 1 2 3 4 5 3
 ```
