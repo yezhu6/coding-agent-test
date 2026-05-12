@@ -1,6 +1,7 @@
 # coding-agent-test
 
 Simple Java CLI example that runs a binary search over sorted integer input.
+Pass sorted array values first; the final argument is the search target.
 
 ## Run
 
